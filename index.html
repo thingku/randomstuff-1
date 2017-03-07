@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Stuff</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			function foo( bar ) {
+				return bar;
+			}
+			function bar( foo ) {
+				return foo;
+			}
+			function addFooBar( a ) {
+				return function( b ) {
+					return a + b;
+				}
+ 			}
+			function factorial(n) {  
+			  	if (n === 0) {
+			    	return 1;
+			  	}
+			  	return n * factorial(n - 1);
+			}
+			function object1() {
+				return {
+					firstname : 'rafon',
+					lastname : 'amista',
+					hello : function() {
+						console.log( this.name );
+					}
+				}
+			}
+			function object2( params ) {
+				return console.log( params );
+			}		
+			function whileLoop() {
+				var i = 0;
+				while ( i < 10 ) {
+				    i++;
+				    console.log( i );
+				}
+			}	
+			function doWhile() {
+				var i = 0;
+				do {
+					i++
+					console.log( i );
+				}
+				while( i < 10 );
+			}
+			function varHoisting() {
+				x = 'Rafon';
+				console.log( x );
+				var x;
+			}
+			function useStrict() {
+				"use strict"
+				x = 'Rafon';
+				console.log( x );
+			}
+			console.log( foo('Rafon') );
+			console.log( bar('Amista') );
+			console.log( addFooBar(1)(3) );
+			console.log( factorial(5) );
+			console.log( object1() );
+			object2('Hello world');
+			whileLoop();
+			doWhile();
+			varHoisting();
+			useStrict();
+		} );
+	</script>
+</head>
+<body>
+</body>
+</html>
